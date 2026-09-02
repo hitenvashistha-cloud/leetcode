@@ -31,6 +31,7 @@ F(n) = F(n - 1) + F(n - 2), for n &gt; 1.
 <strong>Output:</strong> 3
 <strong>Explanation:</strong> F(4) = F(3) + F(2) = 2 + 1 = 3.
 </pre>
+it is done using recursion which is very important for backtrackking , graph and dp problems
 
 <p>&nbsp;</p>
 <p><strong>Constraints:</strong></p>
