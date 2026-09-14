@@ -4,15 +4,19 @@ public:
         int low = 0;
         int high = 0;
         int mx =0;
-        unordered_map<int,int> f;
+        int z = 0;
         for(high = 0; high < nums.size();high++){
-            f[nums[high]]++;
-            while(f[0] > 1){
-                f[nums[low]]--;
-                low++;
+            if(nums[high] == 0){
+                z++;
             }
-            int len = high - low;
-            mx= max(mx,len);
+            while(z > 1){
+               if(nums[low] == 0){
+                z--;
+               }
+               low++;
+            }
+            mx= max(mx,high - low);
+
         }
         return mx;
     }
