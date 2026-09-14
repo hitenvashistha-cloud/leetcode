@@ -5,26 +5,32 @@ public:
         vector<int> res;
         int low = 0;
         int high = 0;
-        unordered_map<char,int> f;
-        unordered_map<char,int> t;
+        int f[26]= {0};
+        int t[26]= {0};
+    
         int k = p.size();
         for(char ch : p){
-            f[ch]++;
+            f[ch-'a']++;
         }
         while(high < s.size()){
-            t[s[high]]++;
+            t[s[high]-'a']++;
             if(high - low + 1 > k){
-                t[s[low]]--;
-                if(t[s[low]] == 0){
-                    t.erase(s[low]);
-                }
+                t[s[low]-'a']--;
                 low++;
             }
             if(high - low+ 1 == k){
-                if(f == t){
-                    res.push_back(low);
+                bool same = true;
+               for(int i= 0; i < 26;i++){
+                if(f[i] != t[i]){
+                    same = false;
+                    break;
                 }
+               }
+            if(same){
+                res.push_back(low);
             }
+            }
+
             high++;
         }
         return res;
