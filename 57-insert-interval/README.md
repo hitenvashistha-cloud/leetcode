@@ -35,3 +35,4 @@
 	<li><code>newInterval.length == 2</code></li>
 	<li><code>0 &lt;= start &lt;= end &lt;= 10<sup>5</sup></code></li>
 </ul>
+<h1>some changes are made to keeping the consistency by administration</h1>
