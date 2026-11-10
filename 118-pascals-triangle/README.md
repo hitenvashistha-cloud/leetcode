@@ -16,3 +16,4 @@
 <ul>
 	<li><code>1 &lt;= numRows &lt;= 30</code></li>
 </ul>
+<h1>Think of Brute force approach first</h1>
